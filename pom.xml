@@ -11,26 +11,19 @@
 
     <groupId>jackpal.androidterm</groupId>
     <artifactId>androidterm</artifactId>
-    <version>1.0.51</version>
+    <version>1.0.53</version>
     <packaging>apklib</packaging>
-
-
-    <properties>
-        <platform.version>4.1.1.4</platform.version>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>jackpal.androidterm</groupId>
             <artifactId>emulatorview</artifactId>
-            <version>1.0.42</version>
             <type>apklib</type>
         </dependency>
 
@@ -42,15 +35,11 @@
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
-                <version>3.1.1</version>
                 <configuration>
                     <androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
                     <assetsDirectory>${project.basedir}/assets</assetsDirectory>
                     <resourceDirectory>${project.basedir}/res</resourceDirectory>
                     <nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
-                    <sdk>
-                        <platform>13</platform>
-                    </sdk>
                     <undeployBeforeDeploy>false</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>
